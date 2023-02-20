@@ -1,0 +1,12 @@
+<div class="jumbotron p-5 m-5">
+  <h3 class="display-4">Results</h3>
+  <p class="lead"><%= "Your word: #{@word.upcase}  -  Total time: #{@total_time} seconds" %></p>
+  <hr class="my-4">
+  <p><%= @results[:message] %></p>
+  <p class="lead">
+    <%# <a class="btn btn-primary btn-lg" href="/new" role="button">Play Again</a> %>
+    <div class="btn btn-primary btn-lg">
+      <%= link_to "Play Again", new_path %>
+    </div>
+  </p>
+</div>

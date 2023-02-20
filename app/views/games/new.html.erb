@@ -1,0 +1,17 @@
+<div class="container p-3 w-50">
+  <div class="row">
+    <% @letters.each do |letter| %>
+    <div class="col text-center py-2 border bg-light">
+      <%= letter.upcase %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="container align-items-center m-5 justify-content-center">
+  <form class="row align-items-center mx-5" action="/score" method="POST" data-turbo="false">
+    <input type="text" class="form-control" name="word" id="text" placeholder="Type your word!">
+    <input class="btn btn-primary my-3" type="submit" value="Play!">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+</div>
